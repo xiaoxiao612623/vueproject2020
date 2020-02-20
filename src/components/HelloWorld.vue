@@ -1,8 +1,9 @@
 <template>
   <div class="hello">
     <h1>{{ msg }}</h1>
-    <h2>Essential Links</h2>
-    <h2>2222Essential Links</h2>
+    <h2>Hello World !</h2>
+    <router-link to='/pos'> <h3>To Pos</h3> </router-link>
+    <h3 @click="aa">跳到</h3>
     <el-switch
       v-model="value"
       active-color="#13ce66"
@@ -19,7 +20,12 @@ export default {
       msg: 'Welcome to Your Vue.js App',
       value: false
     }
-  }
+  },
+  methods: {
+    aa(){
+      this.$router.push({path:'/aa'})
+    }
+  }, 
 }
 </script>
 
